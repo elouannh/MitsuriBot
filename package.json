@@ -1,0 +1,22 @@
+{
+  "name": "obanaiguard",
+  "version": "1.0.0-beta",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bot": "node ."
+  },
+  "author": "PxndxDev",
+  "license": "MIT",
+  "dependencies": {
+    "better-sqlite3": "^7.4.3",
+    "discord-api-types": "^0.37.15",
+    "discord.js": "^14.6.0",
+    "dotenv": "^16.0.3",
+    "enmap": "^5.8.7"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0"
+  }
+}
