@@ -1,4 +1,4 @@
-const { Client: DiscordClient, GatewayIntentBits, User } = require("discord.js");
+const { Client: DiscordClient, User } = require("discord.js");
 
 
 class Client extends DiscordClient {
