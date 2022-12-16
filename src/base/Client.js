@@ -11,7 +11,7 @@ const Duration = require("./Duration");
 const config = require("../config.json");
 const _package = require("../../package.json");
 const UserDb = require("./database/tables/UserDb");
-
+const fs = require("fs");
 
 class Client extends DiscordClient {
     constructor() {
@@ -49,6 +49,11 @@ class Client extends DiscordClient {
         this.bitfield = 8n;
         this.version = _package.version;
         this.maxRequests = 30;
+
+        this.texts = {};
+        for (const file of fs.readdirSync("./src/texts")) {
+            this.texts[file.split(".")[0]] = require(`../texts/${file}`);
+        }
 
         this.token = require("../../token.json").token;
         this.eventManager.loadFiles();

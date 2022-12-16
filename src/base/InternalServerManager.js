@@ -11,6 +11,12 @@ function schema() {
             latency: 0,
             mode: "0b0000",
         },
+        webhooks: {
+            rolesFr: {
+                id: "",
+                token: "",
+            },
+        },
     };
 }
 
@@ -63,6 +69,35 @@ class InternalServerManager extends SQLiteTable {
 
     get statusMode() {
         return this.main.status.mode;
+    }
+
+    get webhooks() {
+        return this.main.webhooks;
+    }
+
+    async getWebhook(channel, webhookData, webhookName) {
+        const wh = this.webhooks?.[webhookName];
+
+        let webhook = null;
+        if (
+            !wh ||
+            wh.id.length < 1 ||
+            wh.token.length < 1 ||
+            !(await this.client.fetchWebhook(wh.id, wh.token).catch(() => null))
+        ) {
+            webhook = await channel.createWebhook({
+                name: webhookData.name,
+                avatar: this.client.enums.Images.Webhook.Roles,
+                reason: "Created a webhook.",
+            }).catch(this.client.catchError);
+
+            this.db.set("main", { id: webhook.id, token: webhook.token }, `webhooks.${webhookName}`);
+        }
+        else {
+            webhook = await this.client.fetchWebhook(wh.id, wh.token).catch(this.client.catchError);
+        }
+
+        return webhook;
     }
 
     userBitField(userId) {

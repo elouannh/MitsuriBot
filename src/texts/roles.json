@@ -1,0 +1,80 @@
+{
+    "fr": {
+        "roles": "\uD83C\uDDEB\uD83C\uDDF7 • Ensemble des rôles du serveur.",
+        "list": [
+            "\u200B\n",
+            "<@&1025812079363506276> **Le rôle suprême, destiné au fondateur et à son co-fondateur.**",
+            "<@&1025812123487567955> **Le rôle des administrateurs.**",
+            "<@&1025812148716322847> **Le rôle des modérateurs.**",
+            "\n",
+            "<@&1048148420638023710> **Le rôle des membres du programme d'abonnement du bot.**",
+            "<@&940334772851449977> **Le rôle des boosters Nitro du serveur.**",
+            "<@&1025812198276206662> **Le rôle des membres du serveur.**",
+            "\n",
+            "<@&1025814729157001276> **Le rôle du chef du projet, le fondateur principal.**",
+            "<@&1025812838746443886> **Le rôle des développeurs.**",
+            "<@&1025812919344177172> **Le rôle des membres dans la capacité de vous aider.**",
+            "<@&1025812890772578315> **Le rôle des chargés de la communication pour le bot.**",
+            "<@&1048141126412017715> **Le rôle des illustrateurs, graphistes et dessinateurs.**",
+            "<@&1025812767304847511> **Le rôle des traducteurs français-anglais.**"
+        ],
+        "takeOne": "> Choisissez vos auto-rôles ci-dessous.",
+        "takeOneDescription": "\u200B\nSélectionnez un rôle pour vous l'approprier. Re-choisissez un rôle pour vous le retirer.",
+        "notifications": "🔔 • Notifications",
+        "notificationsList": [
+            "\u200B\n",
+            "<@&1025814916503978026> **Les notifications qui concernent les animations.**",
+            "<@&1025814953539686420> **Les notifications qui concernent toutes les annonces générales du serveur ou du bot.**",
+            "<@&1025815104475901992> **Les notifications qui concernent les informations importantes.**",
+            "<@&1025815128073048194> **Les notifications qui concernent les informations relatives à la communauté.**",
+            "<@&1025815167759552512> **Les notifications qui concernent les informations spéciales.**"
+        ],
+        "notificationsOptions": [
+            {
+                "label": "Ping'Animation",
+                "description": "Les animations.",
+                "value": "animation"
+            },
+            {
+                "label": "Ping'Global",
+                "description": "Les annonces générales du serveur ou du bot.",
+                "value": "global"
+            },
+            {
+                "label": "Ping'Important",
+                "description": "Les informations importantes.",
+                "value": "important"
+            },
+            {
+                "label": "Ping'Community",
+                "description": "Les informations relatives à la communauté.",
+                "value": "community"
+            },
+            {
+                "label": "Ping'Special",
+                "description": "Les informations spéciales.",
+                "value": "special"
+            }
+        ],
+        "languages": "🌐 • Langues",
+        "languagesList": [
+            "\u200b\n",
+            "<@&1025812722232856687> **Vous parlez français.**",
+            "<@&1025812744487837807> **Vous parlez anglais.**"
+        ],
+        "languagesOptions": [
+            {
+                "label": "Français",
+                "description": "Vous parlez français.",
+                "emoji": "🇫🇷",
+                "value": "fr"
+            },
+            {
+                "label": "Anglais",
+                "description": "Vous parlez anglais.",
+                "emoji": "🇬🇧",
+                "value": "en"
+            }
+        ]
+    }
+}

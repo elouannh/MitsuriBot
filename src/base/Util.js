@@ -5,6 +5,25 @@ const CollectionManager = require("./CollectionManager");
 
 module.exports = {
     /**
+     * Returns the path of a specified value in an object.
+     * @param {string} value The value to search for
+     * @param {Object} object The object to search in
+     * @param {String} path The path to return
+     */
+    trackValue(value, object, path = "") {
+        for (const key in object) {
+            if (object[key] === value) {
+                return path + `${key}`;
+            }
+            else if (typeof object[key] === "object") {
+                const result = this.trackValue(value, object[key], path + `${key}.`);
+                if (result) return result;
+            }
+        }
+        return false;
+    },
+
+    /**
      * @typedef {Object} Request
      * @property {String} name The request name
      * @property {Number} ts The timestamp of the request

@@ -2,6 +2,8 @@ const {
     Collection,
     SlashCommandBuilder,
     SlashCommandUserOption,
+    SlashCommandChannelOption,
+    SlashCommandStringOption,
     ContextMenuCommandBuilder,
     ApplicationCommandType,
 } = require("discord.js");
@@ -61,6 +63,17 @@ class CommandManager {
                         if (option.nameLocalizations) userOption.setNameLocalizations(option.nameLocalizations);
 
                         build.addUserOption(userOption);
+                    }
+                    else if (option.type === 7) {
+                        const stringOption = new SlashCommandChannelOption()
+                            .setName(option.name)
+                            .setDescription(option.description)
+                            .setDescriptionLocalizations(option.descriptionLocalizations)
+                            .setRequired(option.required);
+
+                        if (option.nameLocalizations) stringOption.setNameLocalizations(option.nameLocalizations);
+
+                        build.addChannelOption(stringOption);
                     }
                 }
 
