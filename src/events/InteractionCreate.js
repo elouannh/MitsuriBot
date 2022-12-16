@@ -21,8 +21,18 @@ class InteractionCreate extends Event {
             this.interaction.commandName = this.interaction.commandName.toLowerCase();
             await this.executeCommand();
         }
-        else if (this.interaction?.isSelectMenu()) {
-            console.log(this.client.interactionManager);
+        else if (this.interaction?.isStringSelectMenu()) {
+            const script = this.client.interactionManager.getInteraction("StringSelectMenuInteraction");
+            try {
+                await script.exe(
+                    this.client,
+                    this.interaction,
+                    this.client.languageManager.getLang(this.client.userDb.getLang(this.interaction.user.id)).json,
+                );
+            }
+            catch (err) {
+                this.client.catchError(err);
+            }
         }
     }
 

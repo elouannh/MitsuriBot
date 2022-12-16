@@ -1,4 +1,4 @@
-const { Client: DiscordClient, User } = require("discord.js");
+const { Client: DiscordClient, User, Guild, GuildMember } = require("discord.js");
 const chalk = require("chalk");
 const InternalServerManager = require("./InternalServerManager");
 const CommandManager = require("./CommandManager");
@@ -109,6 +109,30 @@ class Client extends DiscordClient {
         }
 
         return Object.assign(user, { cached });
+    }
+
+    /**
+     * Returns the membre of the guild if the id is able to be fetched.
+     * @param {String} id The user ID
+     * @param {Guild} guild The guild instance
+     * @param {*} secureValue The value to be returned if the user is not found
+     * @returns {Promise<GuildMember & {cached: Boolean}>}
+     */
+    async getMember(id, guild, secureValue) {
+        let member = secureValue;
+        let cached = false;
+
+        try {
+            if ((await guild.members.fetch(id) instanceof GuildMember)) {
+                member = await guild.members.fetch(id);
+                cached = true;
+            }
+        }
+        catch (err) {
+            this.catchError(err);
+        }
+
+        return Object.assign(member, { cached });
     }
 
     /**

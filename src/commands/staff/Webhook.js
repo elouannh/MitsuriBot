@@ -1,5 +1,5 @@
 const Command = require("../../base/Command");
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, SelectMenuBuilder } = require("discord.js");
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, StringSelectMenuBuilder } = require("discord.js");
 
 class Webhook extends Command {
     constructor() {
@@ -71,7 +71,7 @@ class Webhook extends Command {
                     components: [
                         new ActionRowBuilder()
                             .setComponents(
-                                new SelectMenuBuilder()
+                                new StringSelectMenuBuilder()
                                     .setMaxValues(5)
                                     .setCustomId("notificationsMenu")
                                     .setOptions(text.notificationsOptions),
@@ -89,7 +89,7 @@ class Webhook extends Command {
                     components: [
                         new ActionRowBuilder()
                             .setComponents(
-                                new SelectMenuBuilder()
+                                new StringSelectMenuBuilder()
                                     .setMaxValues(2)
                                     .setCustomId("languagesMenu")
                                     .setOptions(text.languagesOptions),
