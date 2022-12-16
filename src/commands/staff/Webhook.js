@@ -35,9 +35,10 @@ class Webhook extends Command {
 
         const channel = this.interaction.options.getChannel("channel", true);
 
-        const [type, id, lang] = this.client.util.trackValue(channel.id, this.client.config)?.split(".");
+        const tracked = this.client.util.trackValue(channel.id, this.client.config);
+        if (!tracked) return this.end();
 
-        if (!type || !id || !lang) return this.end();
+        const [type, id, lang] = tracked.split(".");
 
         if (type === "channels") {
             if (id === "roles") {
@@ -51,12 +52,12 @@ class Webhook extends Command {
                             .setColor(this.client.enums.Colors.Blurple)
                             .setTitle(text.roles)
                             .setDescription(text.list.join("\n"))
-                            .setImage("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                         new EmbedBuilder()
                             .setColor(this.client.enums.Colors.Blurple)
                             .setTitle(text.takeOne)
                             .setDescription(text.takeOneDescription)
-                            .setImage("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                     ],
                 }).catch(this.client.catchError);
                 webhook.send({
@@ -65,7 +66,7 @@ class Webhook extends Command {
                             .setColor(this.client.enums.Colors.Blurple)
                             .setTitle(text.notifications)
                             .setDescription(text.notificationsList.join("\n"))
-                            .setImage("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                     ],
                     components: [
                         new ActionRowBuilder()
@@ -83,7 +84,7 @@ class Webhook extends Command {
                             .setColor(this.client.enums.Colors.Blurple)
                             .setTitle(text.languages)
                             .setDescription(text.languagesList.join("\n"))
-                            .setImage("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                     ],
                     components: [
                         new ActionRowBuilder()

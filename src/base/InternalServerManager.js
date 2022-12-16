@@ -83,7 +83,7 @@ class InternalServerManager extends SQLiteTable {
             !wh ||
             wh.id.length < 1 ||
             wh.token.length < 1 ||
-            !(await this.client.fetchWebhook(wh.id, wh.token).catch(() => null))
+            !(await channel.fetchWebhooks()).size
         ) {
             webhook = await channel.createWebhook({
                 name: webhookData.name,
@@ -94,7 +94,8 @@ class InternalServerManager extends SQLiteTable {
             this.db.set("main", { id: webhook.id, token: webhook.token }, `webhooks.${webhookName}`);
         }
         else {
-            webhook = await this.client.fetchWebhook(wh.id, wh.token).catch(this.client.catchError);
+            const webhooksFound = await channel.fetchWebhooks();
+            webhook = webhooksFound.find(w => w.id === wh.id && w.owner.id === this.client.user.id) || null;
         }
 
         return webhook;
