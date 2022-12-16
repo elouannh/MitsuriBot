@@ -3,6 +3,7 @@ const chalk = require("chalk");
 const InternalServerManager = require("./InternalServerManager");
 const CommandManager = require("./CommandManager");
 const EventManager = require("./EventManager");
+const InteractionManager = require("./InteractionManager");
 const CollectionManager = require("./CollectionManager");
 const LanguageManager = require("./LanguageManager");
 const Util = require("./Util");
@@ -27,6 +28,7 @@ class Client extends DiscordClient {
 
         this.commandManager = new CommandManager(this);
         this.eventManager = new EventManager(this);
+        this.interactionManager = new InteractionManager(this);
         this.languageManager = new LanguageManager(this);
         this.requestsManager = new CollectionManager(
             this, "requests", this.util.reqCallbackFunction, Date.now,
@@ -56,6 +58,7 @@ class Client extends DiscordClient {
         }
 
         this.token = require("../../token.json").token;
+        this.interactionManager.loadFiles();
         this.eventManager.loadFiles();
 
         setInterval(() => {

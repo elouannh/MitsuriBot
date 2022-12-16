@@ -14,7 +14,6 @@ class UserData extends TableData {
     load() {
         this.data.level = new UserLevel(this.data.exp);
         delete this.data.exp;
-        console.log(this.data.level);
     }
 }
 

@@ -21,6 +21,9 @@ class InteractionCreate extends Event {
             this.interaction.commandName = this.interaction.commandName.toLowerCase();
             await this.executeCommand();
         }
+        else if (this.interaction?.isSelectMenu()) {
+            console.log(this.client.interactionManager);
+        }
     }
 
     async executeCommand() {
