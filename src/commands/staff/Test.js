@@ -21,6 +21,7 @@ class Profile extends Command {
     }
 
     async run() {
+        this.client.emit("guildMemberAdd", this.client, this.interaction.member);
         await this.interaction.reply({ ephemeral: true, content: "Done." }).catch(this.client.catchError);
 
         return this.end();
