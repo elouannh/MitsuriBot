@@ -83,8 +83,8 @@ class StringSelectMenuInteraction extends Interaction {
             }).catch(this.client.catchError);
         }
         else if (interaction.customId === "botLanguageMenu") {
-            const choosen = interaction.values[0];
-            this.client.userDb.setLang(interaction.user.id, choosen);
+            const chosen = interaction.values[0];
+            this.client.userDb.setLang(interaction.user.id, chosen);
             lang = this.client.languageManager.getLang(this.client.userDb.getLang(interaction.user.id)).json;
 
             await interaction.reply({
