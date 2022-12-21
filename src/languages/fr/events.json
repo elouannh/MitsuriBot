@@ -1,0 +1,8 @@
+{
+    "guildMemberAdd": {
+        "title": "Bienvenue à notre nouvel arrivant !",
+        "welcome": "Bienvenue __%USER__ sur le serveur **%SERVER** ! Nous sommes désormais **%MEMBERS** !",
+        "rules": "\nPense à lire le règlement ici: <#1025846490087817236> et de prendre tes rôles ici: <#1025846553660891207>.",
+        "changeLang": "\n\n*:flag_gb: If you don't speak french, change the language using `/lang` to change the language of the bot.*"
+    }
+}

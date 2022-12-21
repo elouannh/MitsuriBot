@@ -75,6 +75,22 @@
                 "emoji": "🇬🇧",
                 "value": "en"
             }
+        ],
+        "botLanguage": "💭 • Votre langue sur le bot",
+        "botLanguageDescription": "Pour vos interactions avec le bot, choisissez un seul langage parmi ceux proposé. Il sera utilisé pour vous sur les différents services.",
+        "botLanguageOptions": [
+            {
+                "label": "Français",
+                "description": "Le bot vous parlera français.",
+                "emoji": "🇫🇷",
+                "value": "fr"
+            },
+            {
+                "label": "Anglais",
+                "description": "Le bot vous parlera anglais.",
+                "emoji": "🇬🇧",
+                "value": "en"
+            }
         ]
     }
 }

@@ -96,6 +96,24 @@ class Webhook extends Command {
                             ),
                     ],
                 }).catch(this.client.catchError);
+                webhook.send({
+                    embeds: [
+                        new EmbedBuilder()
+                            .setColor(this.client.enums.Colors.Blurple)
+                            .setTitle(text.botLanguage)
+                            .setDescription(text.botLanguageDescription)
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                    ],
+                    components: [
+                        new ActionRowBuilder()
+                            .setComponents(
+                                new StringSelectMenuBuilder()
+                                    .setMaxValues(1)
+                                    .setCustomId("botLanguageMenu")
+                                    .setOptions(text.botLanguageOptions),
+                            ),
+                    ],
+                }).catch(this.client.catchError);
             }
         }
 

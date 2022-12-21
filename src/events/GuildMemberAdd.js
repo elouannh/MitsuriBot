@@ -12,7 +12,7 @@ class GuildMemberAdd extends Event {
     async exe(client, member) {
         member.roles.add("1025812198276206662").catch(client.catchError);
         const lang = client.languageManager.getLang(client.userDb.getLang(member.id)).json;
-        const gmaLang = lang.interactions.guildMemberAdd;
+        const gmaLang = lang.events.guildMemberAdd;
         client.channels.cache.get(client.config.channels.welcome).send({
             content: member.toString(),
             embeds: [
