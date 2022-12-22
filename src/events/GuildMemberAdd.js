@@ -12,7 +12,6 @@ class GuildMemberAdd extends Event {
     async exe(client, member) {
         member.roles.add("1025812198276206662").catch(client.catchError);
         const lang = client.languageManager.getLang(client.userDb.getLang(member.id)).json;
-        const gmaLang = lang.events.guildMemberAdd;
 
         const frenchVersion = new EmbedBuilder()
             .setColor(0xEFC6D2)

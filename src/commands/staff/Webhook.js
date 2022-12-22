@@ -42,7 +42,7 @@ class Webhook extends Command {
 
         if (type === "channels") {
             if (id === "roles") {
-                const text = this.client.texts.roles.fr;
+                const text = this.client.texts.roles[lang];
                 const webhook = await this.client.internalServerManager.getWebhook(
                     channel, this.client.texts.webhooks.roles[lang], `roles${this.client.util.capitalize(lang)}`,
                 );

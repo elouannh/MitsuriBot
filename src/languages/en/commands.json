@@ -1,0 +1,7 @@
+{
+    "eval": {
+        "modalTitle": "Code to execute",
+        "modalLabel": "JavaScript ES6, automatically asynchronous",
+        "modalPlaceholder": "return \"Arnaud le gay\";"
+    }
+}
