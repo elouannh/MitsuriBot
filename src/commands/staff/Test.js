@@ -15,7 +15,7 @@ class Profile extends Command {
             category: "Staff",
             cooldown: 0,
             completedRequests: ["test"],
-            authorizationBitField: 0b000,
+            authorizationBitField: 0b100,
             permissions: 0n,
         });
     }
