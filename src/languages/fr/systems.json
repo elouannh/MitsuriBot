@@ -24,10 +24,5 @@
         "m": ["minute", "minutes", "min", "mins"],
         "s": ["seconde", "secondes", "s", "s"],
         "ms": ["milliseconde", "millisecondes", "ms", "ms"]
-    },
-    "notificationsUpdated": "Les notifications ont été mises à jour !",
-    "languagesUpdated": "Les langues ont été mises à jour !",
-    "rolesAdded": "Rôles ajouté(s)",
-    "rolesRemoved": "Rôles retiré(s)",
-    "yourRoles": "Vos rôles"
+    }
 }

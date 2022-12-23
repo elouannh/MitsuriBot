@@ -23,6 +23,10 @@ class UserDb extends SQLiteTable {
         return this.get(id).lang;
     }
 
+    setLang(id, lang) {
+        this.set(id, lang, "lang");
+    }
+
     /**
      * Get the embed of the player profile.
      * @param {Object} lang The language object

@@ -42,7 +42,7 @@ class Webhook extends Command {
 
         if (type === "channels") {
             if (id === "roles") {
-                const text = this.client.texts.roles.fr;
+                const text = this.client.texts.roles[lang];
                 const webhook = await this.client.internalServerManager.getWebhook(
                     channel, this.client.texts.webhooks.roles[lang], `roles${this.client.util.capitalize(lang)}`,
                 );
@@ -93,6 +93,24 @@ class Webhook extends Command {
                                     .setMaxValues(2)
                                     .setCustomId("languagesMenu")
                                     .setOptions(text.languagesOptions),
+                            ),
+                    ],
+                }).catch(this.client.catchError);
+                webhook.send({
+                    embeds: [
+                        new EmbedBuilder()
+                            .setColor(this.client.enums.Colors.Blurple)
+                            .setTitle(text.botLanguage)
+                            .setDescription(text.botLanguageDescription)
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                    ],
+                    components: [
+                        new ActionRowBuilder()
+                            .setComponents(
+                                new StringSelectMenuBuilder()
+                                    .setMaxValues(1)
+                                    .setCustomId("botLanguageMenu")
+                                    .setOptions(text.botLanguageOptions),
                             ),
                     ],
                 }).catch(this.client.catchError);

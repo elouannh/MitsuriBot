@@ -75,6 +75,116 @@
                 "emoji": "🇬🇧",
                 "value": "en"
             }
+        ],
+        "botLanguage": "💭 • Votre langue sur le bot",
+        "botLanguageDescription": "Pour vos interactions avec le bot, choisissez un seul langage parmi ceux proposé. Il sera utilisé pour vous sur les différents services.",
+        "botLanguageOptions": [
+            {
+                "label": "Français",
+                "description": "Le bot vous parlera français.",
+                "emoji": "🇫🇷",
+                "value": "fr"
+            },
+            {
+                "label": "Anglais",
+                "description": "Le bot vous parlera anglais.",
+                "emoji": "🇬🇧",
+                "value": "en"
+            }
+        ]
+    },
+    "en": {
+        "roles": "\uD83C\uDDEC\uD83C\uDDE7 • All server roles.",
+        "list": [
+            "\u200B\n",
+            "<@&1025812079363506276> **The supreme role, intended for the founder and his co-founder.**",
+            "<@&1025812123487567955> **The role of administrators.**",
+            "<@&1025812148716322847> **The role of moderators.**",
+            "\n",
+            "<@&1048148420638023710> **The role of members of the bot's subscription program.**",
+            "<@&940334772851449977> **The role of Nitro boosters of the server.**",
+            "<@&1025812198276206662> **The role of members of the server.**",
+            "\n",
+            "<@&1025814729157001276> **The role of the project leader, the main founder.**",
+            "<@&1025812838746443886> **The role of developers.**",
+            "<@&1025812919344177172> **The role of members in the capacity to help you.**",
+            "<@&1025812890772578315> **The role of the bot's communication officers.**",
+            "<@&1048141126412017715> **The role of illustrators, graphic designers and artists.**",
+            "<@&1025812767304847511> **The role of French-English translators.**"
+        ],
+        "takeOne": "> Choose your auto-roles below.",
+        "takeOneDescription": "\u200B\nSelect a role to take it. Re-select a role to remove it.",
+        "notifications": "🔔 • Notifications",
+        "notificationsList": [
+            "\u200B\n",
+            "<@&1025814916503978026> **Notifications concerning animations.**",
+            "<@&1025814953539686420> **Notifications concerning all general announcements of the server or the bot.**",
+            "<@&1025815104475901992> **Notifications concerning important information.**",
+            "<@&1025815128073048194> **Notifications concerning community information.**",
+            "<@&1025815167759552512> **Notifications concerning special information.**"
+        ],
+        "notificationsOptions": [
+            {
+                "label": "Ping'Animation",
+                "description": "Animations.",
+                "value": "animation"
+            },
+            {
+                "label": "Ping'Global",
+                "description": "General announcements of the server or the bot.",
+                "value": "global"
+            },
+            {
+                "label": "Ping'Important",
+                "description": "Important information.",
+                "value": "important"
+            },
+            {
+                "label": "Ping'Community",
+                "description": "Community information.",
+                "value": "community"
+            },
+            {
+                "label": "Ping'Special",
+                "description": "Special information.",
+                "value": "special"
+            }
+        ],
+        "languages": "🌐 • Languages",
+        "languagesList": [
+            "\u200B\nℹ️ You can take several language roles, you are not limited to the one you master best.\n",
+            "<@&1025812722232856687> **You speak French.**",
+            "<@&1025812744487837807> **You speak English.**"
+        ],
+        "languagesOptions": [
+            {
+                "label": "French",
+                "description": "You speak French.",
+                "emoji": "🇫🇷",
+                "value": "fr"
+            },
+            {
+                "label": "English",
+                "description": "You speak English.",
+                "emoji": "🇬🇧",
+                "value": "en"
+            }
+        ],
+        "botLanguage": "💭 • Your language on the bot",
+        "botLanguageDescription": "For your interactions with the bot, choose only one language among those proposed. It will be used for you on the various services.",
+        "botLanguageOptions": [
+            {
+                "label": "French",
+                "description": "The bot will speak French to you.",
+                "emoji": "🇫🇷",
+                "value": "fr"
+            },
+            {
+                "label": "English",
+                "description": "The bot will speak English to you.",
+                "emoji": "🇬🇧",
+                "value": "en"
+            }
         ]
     }
 }

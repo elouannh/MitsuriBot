@@ -31,14 +31,14 @@ class StringSelectMenuInteraction extends Interaction {
             }
             await member.roles.set(after).catch(this.client.catchError);
             await interaction.reply({
-                content: `${lang.systems.notificationsUpdated}\n\n${
-                        added.length > 0 ? `> **${lang.systems.rolesAdded}:**\n`
+                content: `${lang.interactions.notificationsUpdated}\n\n${
+                        added.length > 0 ? `> **${lang.interactions.rolesAdded}:**\n`
                         + `${added.map(r => r.toString()).join(", ")}\n` : ""
                     }${
-                        removed.length > 0 ? `> **${lang.systems.rolesRemoved}:**\n`
+                        removed.length > 0 ? `> **${lang.interactions.rolesRemoved}:**\n`
                         + `${removed.map(r => r.toString()).join(", ")}\n` : ""
                     }`
-                    + `\n__${lang.systems.yourRoles}:__ ${after
+                    + `\n__${lang.interactions.yourRoles}:__ ${after
                         .filter(r => this.client.config.roles.notifications.includes(r.id))
                         .map(r => r.toString()).join(", ")
                     }`,
@@ -68,17 +68,27 @@ class StringSelectMenuInteraction extends Interaction {
             }
             await member.roles.set(after).catch(this.client.catchError);
             await interaction.reply({
-                content: `${lang.systems.languagesUpdated}\n\n${
+                content: `${lang.interactions.languagesUpdated}\n\n${
                         added.length > 0 ? `> **${lang.systems.rolesAdded}:**\n`
                             + `${added.map(r => r.toString()).join(", ")}\n` : ""
                     }${
-                        removed.length > 0 ? `> **${lang.systems.rolesRemoved}:**\n`
+                        removed.length > 0 ? `> **${lang.interactions.rolesRemoved}:**\n`
                             + `${removed.map(r => r.toString()).join(", ")}\n` : ""
                     }`
-                    + `\n__${lang.systems.yourRoles}:__ ${after
+                    + `\n__${lang.interactions.yourRoles}:__ ${after
                         .filter(r => this.client.config.roles.languages.includes(r.id))
                         .map(r => r.toString()).join(", ")
                     }`,
+                ephemeral: true,
+            }).catch(this.client.catchError);
+        }
+        else if (interaction.customId === "botLanguageMenu") {
+            const chosen = interaction.values[0];
+            this.client.userDb.setLang(interaction.user.id, chosen);
+            lang = this.client.languageManager.getLang(this.client.userDb.getLang(interaction.user.id)).json;
+
+            await interaction.reply({
+                content: `${lang.interactions.talkInThisLanguage}`,
                 ephemeral: true,
             }).catch(this.client.catchError);
         }
