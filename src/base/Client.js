@@ -1,4 +1,4 @@
-const { Client: DiscordClient, User, Guild, GuildMember } = require("discord.js");
+const { Client: DiscordClient, User, Guild, GuildMember, IntentsBitField } = require("discord.js");
 const chalk = require("chalk");
 const InternalServerManager = require("./InternalServerManager");
 const CommandManager = require("./CommandManager");
@@ -13,11 +13,22 @@ const config = require("../config.json");
 const _package = require("../../package.json");
 const UserDb = require("./database/tables/UserDb");
 const fs = require("fs");
+const flags = IntentsBitField.Flags;
 
 class Client extends DiscordClient {
     constructor() {
         super({
-            intents: 3276799,
+            intents: new IntentsBitField().add(
+                flags.GuildPresences, flags.Guilds,
+                flags.GuildBans, flags.GuildMessages,
+                flags.GuildMessageReactions, flags.GuildVoiceStates,
+                flags.GuildMessageTyping, flags.Guilds,
+                flags.GuildMembers, flags.GuildInvites,
+                flags.GuildWebhooks, flags.GuildIntegrations,
+                flags.GuildMessageReactions, flags.GuildMessageTyping,
+                flags.DirectMessages, flags.DirectMessageReactions,
+                flags.DirectMessageTyping,
+            ),
             failIfNotExists: false,
         });
         this.chalk = chalk;
