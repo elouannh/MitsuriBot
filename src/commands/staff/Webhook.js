@@ -50,7 +50,10 @@ class Webhook extends Command {
                     embeds: [
                         new EmbedBuilder()
                             .setColor(this.client.enums.Colors.Blurple)
-                            .setTitle(text.roles)
+                            .setImage(text.roles)
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                        new EmbedBuilder()
+                            .setColor(this.client.enums.Colors.Blurple)
                             .setDescription(text.list.join("\n"))
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                         new EmbedBuilder()
