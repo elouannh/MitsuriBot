@@ -1,6 +1,6 @@
 {
     "fr": {
-        "roles": "\uD83C\uDDEB\uD83C\uDDF7 • Ensemble des rôles du serveur.",
+        "roles": "https://cdn.discordapp.com/attachments/1059454470725042216/1064282641525899374/Roles_display_1920_500.png",
         "list": [
             "\u200B\n",
             "<@&1025812079363506276> **Le rôle suprême, destiné au fondateur et à son co-fondateur.**",
@@ -12,11 +12,14 @@
             "<@&1025812198276206662> **Le rôle des membres du serveur.**",
             "\n",
             "<@&1025814729157001276> **Le rôle du chef du projet, le fondateur principal.**",
+            "<@&1063540271943536710> **Le rôle de l'équipe de création du bot (idées, mécaniques).**",
             "<@&1025812838746443886> **Le rôle des développeurs.**",
-            "<@&1025812919344177172> **Le rôle des membres dans la capacité de vous aider.**",
-            "<@&1025812890772578315> **Le rôle des chargés de la communication pour le bot.**",
-            "<@&1048141126412017715> **Le rôle des illustrateurs, graphistes et dessinateurs.**",
-            "<@&1025812767304847511> **Le rôle des traducteurs français-anglais.**"
+            "<@&1025812890772578315> **Le rôle des chargés de communication, réseaux sociaux.**",
+            "<@&1048141126412017715> **Le rôle des artistes, illustrateurs, designers.**",
+            "<@&1025812767304847511> **Le rôle des traducteurs français-anglais.**",
+            "<@&1063202432265490573> **Le rôle des voix off pour le bot.**",
+            "<@&1064216280703447162> **Le rôle des gens dont le but est de gérer la communauté.**",
+            "<@&1055917828370354268> **Le rôle des gens qui __ne sont pas__ staff et qui aident volontairement.**"
         ],
         "takeOne": "> Choisissez vos auto-rôles ci-dessous.",
         "takeOneDescription": "\u200B\nSélectionnez un rôle pour vous l'approprier. Re-choisissez un rôle pour vous le retirer.",
@@ -94,7 +97,7 @@
         ]
     },
     "en": {
-        "roles": "\uD83C\uDDEC\uD83C\uDDE7 • All server roles.",
+        "roles": "https://cdn.discordapp.com/attachments/1059454470725042216/1064282641307803768/Roles_display_1920_500.png",
         "list": [
             "\u200B\n",
             "<@&1025812079363506276> **The supreme role, intended for the founder and his co-founder.**",
@@ -106,11 +109,14 @@
             "<@&1025812198276206662> **The role of members of the server.**",
             "\n",
             "<@&1025814729157001276> **The role of the project leader, the main founder.**",
+            "<@&1063540271943536710> **The role of the bot creation team (ideas, mechanics).**",
             "<@&1025812838746443886> **The role of developers.**",
-            "<@&1025812919344177172> **The role of members in the capacity to help you.**",
-            "<@&1025812890772578315> **The role of the bot's communication officers.**",
-            "<@&1048141126412017715> **The role of illustrators, graphic designers and artists.**",
-            "<@&1025812767304847511> **The role of French-English translators.**"
+            "<@&1025812890772578315> **The role of communication managers, social networks.**",
+            "<@&1048141126412017715> **The role of artists, illustrators, designers.**",
+            "<@&1025812767304847511> **The role of French-English translators.**",
+            "<@&1063202432265490573> **The role of voice off for the bot.**",
+            "<@&1064216280703447162> **The role of people whose goal is to manage the community.**",
+            "<@&1055917828370354268> **The role of people who __are not__ staff and who help voluntarily.**"
         ],
         "takeOne": "> Choose your auto-roles below.",
         "takeOneDescription": "\u200B\nSelect a role to take it. Re-select a role to remove it.",
