@@ -88,7 +88,8 @@ class Webhook extends Command {
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                         new EmbedBuilder()
                             .setColor(Number(this.client.config.colors.infos))
-                            .setDescription(text.list.join("\n"))
+                            .setTitle(text.links)
+                            .setDescription(text.linksList.join("\n"))
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                     ],
                 }).catch(this.client.catchError);
