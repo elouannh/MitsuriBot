@@ -6,7 +6,6 @@ const { EmbedBuilder } = require("discord.js");
 function schema(id) {
     return {
         id: id,
-        lang: "fr",
     };
 }
 
@@ -19,14 +18,6 @@ class UserDb extends SQLiteTable {
         return new UserData(this.client, this.get(id));
     }
 
-    getLang(id) {
-        return this.get(id).lang;
-    }
-
-    setLang(id, lang) {
-        this.set(id, lang, "lang");
-    }
-
     /**
      * Get the embed of the player profile.
      * @param {Object} lang The language object
@@ -35,8 +26,7 @@ class UserDb extends SQLiteTable {
      * @returns {Promise<EmbedBuilder>}
      */
     async getEmbed(lang, data, user) {
-        const embed = new EmbedBuilder();
-        return embed;
+        return new EmbedBuilder();
     }
 }
 

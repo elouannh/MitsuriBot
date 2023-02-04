@@ -1,5 +1,5 @@
 const Command = require("../../base/Command");
-const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, StringSelectMenuBuilder } = require("discord.js");
+const { EmbedBuilder } = require("discord.js");
 
 class Webhook extends Command {
     constructor() {
@@ -23,16 +23,14 @@ class Webhook extends Command {
             type: [1],
             dmPermission: false,
             category: "Staff",
-            cooldown: 10,
-            completedRequests: ["webhook"],
+            cooldown: 1,
+            completedRequests: [],
             authorizationBitField: 0b010,
             permissions: 0n,
         });
     }
 
     async run() {
-        await this.interaction.reply({ ephemeral: true, content: "Done." }).catch(this.client.catchError);
-
         const channel = this.interaction.options.getChannel("channel", true);
 
         const tracked = this.client.util.trackValue(channel.id, this.client.config);
@@ -49,77 +47,55 @@ class Webhook extends Command {
                 webhook.send({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor(this.client.enums.Colors.Blurple)
+                            .setColor(Number(this.client.config.colors.roles))
                             .setImage(text.roles)
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                         new EmbedBuilder()
-                            .setColor(this.client.enums.Colors.Blurple)
+                            .setColor(Number(this.client.config.colors.roles))
                             .setDescription(text.list.join("\n"))
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
-                        new EmbedBuilder()
-                            .setColor(this.client.enums.Colors.Blurple)
-                            .setTitle(text.takeOne)
-                            .setDescription(text.takeOneDescription)
-                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                     ],
                 }).catch(this.client.catchError);
+            }
+            else if (id === "rules") {
+                const text = this.client.texts.rules[lang];
+                const webhook = await this.client.internalServerManager.getWebhook(
+                    channel, this.client.texts.webhooks.rules[lang], `rules${this.client.util.capitalize(lang)}`,
+                );
                 webhook.send({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor(this.client.enums.Colors.Blurple)
-                            .setTitle(text.notifications)
-                            .setDescription(text.notificationsList.join("\n"))
+                            .setColor(Number(this.client.config.colors.rules))
+                            .setImage(text.rules)
+                            .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
+                        new EmbedBuilder()
+                            .setColor(Number(this.client.config.colors.rules))
+                            .setDescription(text.list.join("\n"))
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
                     ],
-                    components: [
-                        new ActionRowBuilder()
-                            .setComponents(
-                                new StringSelectMenuBuilder()
-                                    .setMaxValues(5)
-                                    .setCustomId("notificationsMenu")
-                                    .setOptions(text.notificationsOptions),
-                            ),
-                    ],
                 }).catch(this.client.catchError);
+            }
+            else if (id === "infos") {
+                const text = this.client.texts.infos[lang];
+                const webhook = await this.client.internalServerManager.getWebhook(
+                    channel, this.client.texts.webhooks.infos[lang], `infos${this.client.util.capitalize(lang)}`,
+                );
                 webhook.send({
                     embeds: [
                         new EmbedBuilder()
-                            .setColor(this.client.enums.Colors.Blurple)
-                            .setTitle(text.languages)
-                            .setDescription(text.languagesList.join("\n"))
+                            .setColor(Number(this.client.config.colors.infos))
+                            .setImage(text.infos)
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
-                    ],
-                    components: [
-                        new ActionRowBuilder()
-                            .setComponents(
-                                new StringSelectMenuBuilder()
-                                    .setMaxValues(2)
-                                    .setCustomId("languagesMenu")
-                                    .setOptions(text.languagesOptions),
-                            ),
-                    ],
-                }).catch(this.client.catchError);
-                webhook.send({
-                    embeds: [
                         new EmbedBuilder()
-                            .setColor(this.client.enums.Colors.Blurple)
-                            .setTitle(text.botLanguage)
-                            .setDescription(text.botLanguageDescription)
+                            .setColor(Number(this.client.config.colors.infos))
+                            .setDescription(text.list.join("\n"))
                             .setThumbnail("https://cdn.discordapp.com/attachments/995812450970652672/1053243603041923092/Empty.png"),
-                    ],
-                    components: [
-                        new ActionRowBuilder()
-                            .setComponents(
-                                new StringSelectMenuBuilder()
-                                    .setMaxValues(1)
-                                    .setCustomId("botLanguageMenu")
-                                    .setOptions(text.botLanguageOptions),
-                            ),
                     ],
                 }).catch(this.client.catchError);
             }
         }
 
+        await this.interaction.reply({ ephemeral: true, content: "Done." }).catch(this.client.catchError);
         return this.end();
     }
 }

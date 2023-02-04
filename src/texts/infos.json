@@ -1,0 +1,26 @@
+{
+    "fr": {
+        "infos": "https://cdn.discordapp.com/attachments/1059454470725042216/1064282640821256192/Informations_1920_500.png",
+        "links": "→ Liens",
+        "linksList": [
+            "Serveur support officiel: « Obanai's Dojo » https://discord.gg/gfVr2UNJqy",
+            "Serveur de testing officiel: « Obanai's Cottage » https://discord.gg/vynGW56dYB",
+            "Organisation GitHub: https://github.com/ObanaiBot",
+            "Compte Twitter officiel: https://twitter.com/ObanaiBot",
+            "Chaine YouTube officielle: https://www.youtube.com/@pandascript8723",
+            "WattPad officiel avec narration du jeu: https://www.wattpad.com/user/PxndxDev"
+        ]
+    },
+    "en": {
+        "infos": "https://cdn.discordapp.com/attachments/1059454470725042216/1064282640821256192/Informations_1920_500.png",
+        "links": "→ ",
+        "linksList": [
+            "Official support server: « Obanai's Dojo » https://discord.gg/gfVr2UNJqy",
+            "Official testing server: « Obanai's Cottage » https://discord.gg/vynGW56dYB",
+            "GitHub organization: https://github.com/ObanaiBot",
+            "Official Twitter account: https://twitter.com/ObanaiBot",
+            "Official YouTube channel: https://www.youtube.com/@pandascript8723",
+            "Official WattPad account with narration of the game: https://www.wattpad.com/user/PxndxDev"
+        ]
+    }
+}

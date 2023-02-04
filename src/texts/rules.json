@@ -1,0 +1,20 @@
+{
+    "fr": {
+        "rules": "https://cdn.discordapp.com/attachments/1059454470725042216/1064282641051963502/Reglement_display_1920_500.png",
+        "list": [
+            "**Tous les documents importants tels que le règlement, les CGU ou la politique de confidentialité se trouvent dans un dossier GitHub réservé. Tous les textes sont sous licence [`CC BY-NC-ND 4.0`](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.fr).**\n",
+            "Code de conduite, règlement du serveur: [**lire ici**](https://cutt.ly/rulesfr)\n *→ Obligatoire !*\n",
+            "Conditions Générales d'Utilisation du bot: [**lire ici**](https://cutt.ly/cgufr)\n *→ Obligatoire !*\n",
+            "Politique de Confidentialité du bot: [**lire ici**](https://cutt.ly/privacyfr)\n"
+        ]
+    },
+    "en": {
+        "rules": "https://cdn.discordapp.com/attachments/1059454470725042216/1064625370428612729/Rules_display_1920_500.png",
+        "list": [
+            "**All important documents such as the code of conduct, the TOS or the privacy policy are in a GitHub folder reserved for this purpose. All texts are under license [`CC BY-NC-ND 4.0`](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en).**\n",
+            "Code of Conduct, server rules: [**read here**](https://cutt.ly/rulesen)\n *→ Mandatory !*\n",
+            "Bot Terms of Use: [**read here**](https://cutt.ly/cguen) **[French only :warning:]**\n *→ Mandatory !*\n",
+            "Bot Privacy Policy: [**read here**](https://cutt.ly/privacyen) **[French only :warning:]**\n"
+        ]
+    }
+}

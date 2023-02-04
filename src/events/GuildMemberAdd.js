@@ -17,7 +17,7 @@ class GuildMemberAdd extends Event {
             .setDescription(`:flag_fr: • Bienvenue sur le serveur **${member.guild.name}** !`
                 + `\nTu es notre \`${memberCount}\`ème membre !\n\n> `
                 + "Pense à lire le règlement ici: <#1025846490087817236> "
-                + "et de prendre tes rôles ici: <#1025846553660891207>.")
+                + "et personnalise ton expérience ici avec l'onboarding ! :sparkles:")
             .setTimestamp()
             .setImage("https://cdn.discordapp.com/attachments/995812450970652672/1055562717559267338/BIENVENUE_.png")
             .setFooter({ text: "Français/French.", iconURL: "https://cdn.discordapp.com/attachments/995812450970652672/1055548541159866469/la-france.png" })
@@ -29,7 +29,7 @@ class GuildMemberAdd extends Event {
             .setDescription(`:flag_gb: • Welcome into the server **${member.guild.name}** !`
                 + `\nYou are the \`${memberCount}\`th member !\n\n> `
                 + " Remember to read the rules here: <#1025846759588646962> "
-                + "and take your roles here: <#1025846800751530085>.")
+                + "and customize your experience here with onboarding ! :sparkles:")
             .setTimestamp()
             .setImage("https://cdn.discordapp.com/attachments/995812450970652672/1055567445907210330/Copie_de_BIENVENUE_.png")
             .setFooter({ text: "Anglais/English.", iconURL: "https://cdn.discordapp.com/attachments/995812450970652672/1055548540866281552/royaume-uni.png" })

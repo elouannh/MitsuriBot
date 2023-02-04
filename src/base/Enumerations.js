@@ -21,7 +21,9 @@ module.exports = {
     },
     Images: {
         Webhook: {
-            Roles: "https://cdn.discordapp.com/attachments/995812450970652672/1053230525105573888/Piliers.webp",
+            Roles: "https://cdn.discordapp.com/attachments/1059454470725042216/1071489205554909284/flat_shinobu2.png",
+            Rules: "https://cdn.discordapp.com/attachments/1059454470725042216/1071489205554909284/flat_shinobu2.png",
+            Infos: "https://cdn.discordapp.com/attachments/1059454470725042216/1071489205554909284/flat_shinobu2.png",
         },
     },
 };

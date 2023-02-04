@@ -6,5 +6,21 @@
         "en": {
             "name": "\uD83C\uDDEC\uD83C\uDDE7 • Roles"
         }
+    },
+    "rules":{
+        "fr": {
+            "name": "\uD83D\uDCDD • Règlement"
+        },
+        "en": {
+            "name": "\uD83D\uDCDD • Rules"
+        }
+    },
+    "infos": {
+        "fr": {
+            "name": "\uD83D\uDCD6 • Informations"
+        },
+        "en": {
+            "name": "\uD83D\uDCD6 • Informations"
+        }
     }
 }

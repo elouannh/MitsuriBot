@@ -27,7 +27,7 @@ class InteractionCreate extends Event {
                 await script.exe(
                     this.client,
                     this.interaction,
-                    this.client.languageManager.getLang(this.client.userDb.getLang(this.interaction.user.id)).json,
+                    this.client.languageManager.getLang(this.client.getLang(this.interaction.user.id)).json,
                 );
             }
             catch (err) {
